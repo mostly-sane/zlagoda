@@ -8,10 +8,11 @@ from pathlib import Path
 # from tkinter import *
 # Explicit imports to satisfy Flake8
 from tkinter import Tk, Canvas, Entry, Text, Button, PhotoImage
+from PIL import Image, ImageTk
 
 
 OUTPUT_PATH = Path(__file__).parent
-ASSETS_PATH = OUTPUT_PATH / Path(r"C:\Users\mykha\Documents\GitHub\zlagoda\Tkinter-Designer-master\build\assets\frame0")
+ASSETS_PATH = OUTPUT_PATH / Path("assets/frame0")
 
 
 def relative_to_assets(path: str) -> Path:
@@ -52,8 +53,7 @@ canvas.create_text(
     font=("Inter", 20 * -1)
 )
 
-button_image_1 = PhotoImage(
-    file=relative_to_assets("button_1.png"))
+button_image_1 = ImageTk.PhotoImage(Image.open(relative_to_assets("button_1.png")))
 button_1 = Button(
     image=button_image_1,
     borderwidth=0,
@@ -68,8 +68,7 @@ button_1.place(
     height=30.0
 )
 
-button_image_2 = PhotoImage(
-    file=relative_to_assets("button_2.png"))
+button_image_2 = ImageTk.PhotoImage(Image.open(relative_to_assets("button_2.png")))
 button_2 = Button(
     image=button_image_2,
     borderwidth=0,
@@ -84,8 +83,7 @@ button_2.place(
     height=30.0
 )
 
-button_image_3 = PhotoImage(
-    file=relative_to_assets("button_3.png"))
+button_image_3 = ImageTk.PhotoImage(Image.open(relative_to_assets("button_3.png")))
 button_3 = Button(
     image=button_image_3,
     borderwidth=0,
@@ -100,8 +98,7 @@ button_3.place(
     height=31.0
 )
 
-button_image_4 = PhotoImage(
-    file=relative_to_assets("button_4.png"))
+button_image_4 = ImageTk.PhotoImage(Image.open(relative_to_assets("button_4.png")))
 button_4 = Button(
     image=button_image_4,
     borderwidth=0,
@@ -116,8 +113,7 @@ button_4.place(
     height=30.0
 )
 
-button_image_5 = PhotoImage(
-    file=relative_to_assets("button_5.png"))
+button_image_5 = ImageTk.PhotoImage(Image.open(relative_to_assets("button_5.png")))
 button_5 = Button(
     image=button_image_5,
     borderwidth=0,
@@ -132,8 +128,7 @@ button_5.place(
     height=30.0
 )
 
-button_image_6 = PhotoImage(
-    file=relative_to_assets("button_6.png"))
+button_image_6 = ImageTk.PhotoImage(Image.open(relative_to_assets("button_6.png")))
 button_6 = Button(
     image=button_image_6,
     borderwidth=0,
@@ -148,8 +143,7 @@ button_6.place(
     height=31.0
 )
 
-entry_image_1 = PhotoImage(
-    file=relative_to_assets("entry_1.png"))
+entry_image_1 = ImageTk.PhotoImage(Image.open(relative_to_assets("entry_1.png")))
 entry_bg_1 = canvas.create_image(
     637.0,
     39.5,
@@ -176,8 +170,7 @@ canvas.create_rectangle(
     fill="#B02525",
     outline="")
 
-button_image_7 = PhotoImage(
-    file=relative_to_assets("button_7.png"))
+button_image_7 = ImageTk.PhotoImage(Image.open(relative_to_assets("button_7.png")))
 button_7 = Button(
     image=button_image_7,
     borderwidth=0,
